@@ -6,9 +6,33 @@
     <title>Hop Hop Hop !</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="map"></div>
+    <header>
+        <h1>Hop Hop Hop !</h1>
+        <nav>
+            <ul>
+                <li><a href="#map">Carte</a></li>
+                <li><a href="#itineraries">Itinéraires</a></li>
+                <li><a href="#realtime">Temps Réel</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="map">
+            <div id="map-container"></div>
+        </section>
+        <section id="itineraries">
+            <h2>Calcul d'Itinéraires</h2>
+            <!-- Ajouter ici les éléments pour le calcul d'itinéraires -->
+        </section>
+        <section id="realtime">
+            <h2>Temps Réel</h2>
+            <!-- Ajouter ici les éléments pour le temps réel -->
+        </section>
+    </main>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
