@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "name": "Réseau de Niort",
+        "gtfsUrl": "https://exemple.com/niort.zip",
+        "realTimeUrl": "https://exemple.com/niort-realtime"
+    }
+    // D'autres réseaux seront ajoutés ici
+]
