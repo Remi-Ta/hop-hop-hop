@@ -1,9 +1,42 @@
 body, html {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
     height: 100%;
 }
 
-#map {
-    height: 100%;
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 1rem;
+}
+
+#map-container {
+    height: 500px;
+    margin-bottom: 2rem;
 }
