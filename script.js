@@ -14,12 +14,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 fetch(network.gtfsUrl)
                     .then(response => response.text())
                     .then(data => {
-                        // Ici, vous devez parser le fichier GTFS (zip) et extraire les arrêts et lignes
-                        // Pour l'instant, nous allons simuler l'ajout d'un arrêt
-                        L.marker([48.8566, 2.3522]).addTo(map)
+                        // Simuler l'ajout d'un arrêt
+                        const marker = L.marker([48.8566, 2.3522]).addTo(map)
                             .bindPopup(`Arrêt de ${network.name}`)
                             .openPopup();
+
+                        // Ajouter les informations en temps réel
+                        if (network.realTimeUrl) {
+                            fetchRealTimeData(network.realTimeUrl, marker);
+                        }
                     });
             });
         });
+
+    function fetchRealTimeData(url, marker) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                // Simuler l'affichage des prochains passages
+                const nextDeparture = data.nextDeparture || 'N/A';
+                marker.bindPopup(`Prochain passage : ${nextDeparture}`);
+            });
+    }
 });
