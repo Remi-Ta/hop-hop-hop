@@ -9,6 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
             networks.forEach(network => {
                 const listItem = document.createElement('li');
                 listItem.textContent = `${network.name} - GTFS: ${network.gtfsUrl}, Temps Réel: ${network.realTimeUrl}`;
+
+                // Ajouter des boutons de modification et de suppression
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Modifier';
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Supprimer';
+
+                listItem.appendChild(editButton);
+                listItem.appendChild(deleteButton);
                 networkList.appendChild(listItem);
             });
         });
@@ -44,6 +53,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Mettre à jour l'affichage
                 const listItem = document.createElement('li');
                 listItem.textContent = `${newNetwork.name} - GTFS: ${newNetwork.gtfsUrl}, Temps Réel: ${newNetwork.realTimeUrl}`;
+
+                // Ajouter des boutons de modification et de suppression
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Modifier';
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Supprimer';
+
+                listItem.appendChild(editButton);
+                listItem.appendChild(deleteButton);
                 networkList.appendChild(listItem);
 
                 // Réinitialiser le formulaire
