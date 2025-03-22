@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Hop Hop Hop !</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Boldense:wght@400;700&family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse:wght@400;700&family=Figtree:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1 class="boldense">Admin - Hop Hop Hop !</h1>
+        <h1 class="boldonse">Admin - Hop Hop Hop !</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
@@ -20,7 +20,7 @@
     </header>
     <main>
         <section id="network-management">
-            <h2 class="boldense">Gestion des Réseaux</h2>
+            <h2 class="boldonse">Gestion des Réseaux</h2>
             <form id="network-form">
                 <label for="network-name" class="figtree">Nom du Réseau :</label>
                 <input type="text" id="network-name" name="network-name" required>
@@ -28,26 +28,26 @@
                 <input type="url" id="gtfs-url" name="gtfs-url" required>
                 <label for="realtime-url" class="figtree">URL Temps Réel :</label>
                 <input type="url" id="realtime-url" name="realtime-url">
-                <button type="submit" class="boldense">Ajouter Réseau</button>
+                <button type="submit" class="boldonse">Ajouter Réseau</button>
             </form>
             <ul id="network-list">
                 <!-- Les réseaux seront listés ici -->
             </ul>
         </section>
         <section id="gtfs-upload">
-            <h2 class="boldense">Télécharger les fichiers GTFS</h2>
+            <h2 class="boldonse">Télécharger les fichiers GTFS</h2>
             <form id="gtfs-form">
                 <label for="gtfs-file" class="figtree">Fichier GTFS (zip) :</label>
                 <input type="file" id="gtfs-file" name="gtfs-file" accept=".zip" required>
-                <button type="submit" class="boldense">Télécharger</button>
+                <button type="submit" class="boldonse">Télécharger</button>
             </form>
         </section>
         <section id="realtime-api">
-            <h2 class="boldense">Lier une API en Temps Réel</h2>
+            <h2 class="boldonse">Lier une API en Temps Réel</h2>
             <form id="realtime-form">
                 <label for="realtime-url" class="figtree">URL de l'API en Temps Réel :</label>
                 <input type="url" id="realtime-url" name="realtime-url" required>
-                <button type="submit" class="boldense">Lier API</button>
+                <button type="submit" class="boldonse">Lier API</button>
             </form>
         </section>
     </main>
