@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': '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'
+                        'Authorization': 'token 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'
                     },
                     body: JSON.stringify({
                         message: 'Update networks.json',
@@ -82,9 +82,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const file = fileInput.files[0];
 
         if (file) {
-            // Simuler le traitement du fichier GTFS
-            console.log('Fichier GTFS téléchargé :', file.name);
-            // Ici, vous pouvez ajouter la logique pour traiter le fichier GTFS
+            // Utiliser une bibliothèque pour lire le fichier GTFS
+            // Exemple avec jszip et Papaparse
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const zip = new JSZip();
+                zip.loadAsync(e.target.result).then(function(content) {
+                    Object.keys(content.files).forEach(function(filename) {
+                        content.files[filename].async("string").then(function(data) {
+                            const csv = Papa.parse(data, {header: true}).data;
+                            console.log(`Données de ${filename} :`, csv);
+                            // Traiter les données CSV ici
+                        });
+                    });
+                });
+            };
+            reader.readAsArrayBuffer(file);
         }
     });
 
