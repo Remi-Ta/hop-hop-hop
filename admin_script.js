@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const networkForm = document.getElementById('network-form');
     const networkList = document.getElementById('network-list');
+    const gtfsForm = document.getElementById('gtfs-form');
+    const realtimeForm = document.getElementById('realtime-form');
 
     // Charger les réseaux existants depuis le fichier JSON
     fetch('networks.json')
@@ -67,5 +69,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Réinitialiser le formulaire
                 networkForm.reset();
             });
+    });
+
+    gtfsForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const fileInput = document.getElementById('gtfs-file');
+        const file = fileInput.files[0];
+
+        if (file) {
+            // Simuler le traitement du fichier GTFS
+            console.log('Fichier GTFS téléchargé :', file.name);
+            // Ici, vous pouvez ajouter la logique pour traiter le fichier GTFS
+        }
+    });
+
+    realtimeForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const realtimeUrl = document.getElementById('realtime-url').value;
+        console.log('API en Temps Réel liée :', realtimeUrl);
+        // Ici, vous pouvez ajouter la logique pour enregistrer l'URL de l'API
     });
 });
