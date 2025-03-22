@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hop Hop Hop ! - Carte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Hop Hop Hop !</h1>
+        <nav>
+            <ul>
+                <li><a href="map.html">Carte</a></li>
+                <li><a href="lines.html">Lignes</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="map-section">
+            <h2>Carte Interactive</h2>
+            <div id="map-container"></div>
+            <div id="itinerary-search">
+                <h3>Rechercher un Itinéraire</h3>
+                <input type="text" id="itinerary-from" placeholder="Départ">
+                <input type="text" id="itinerary-to" placeholder="Arrivée">
+                <button id="itinerary-search-btn">Rechercher</button>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="map_script.js"></script>
+</body>
+</html>
