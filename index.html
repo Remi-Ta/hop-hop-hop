@@ -13,29 +13,29 @@
         <h1>Hop Hop Hop !</h1>
         <nav>
             <ul>
-                <li><a href="#map">Carte</a></li>
-                <li><a href="#itineraries">Itinéraires</a></li>
-                <li><a href="#realtime">Temps Réel</a></li>
+                <li><a href="#map-section">Carte</a></li>
+                <li><a href="#lines-section">Lignes</a></li>
                 <li><a href="admin.html">Admin</a></li>
             </ul>
         </nav>
     </header>
-    <section id="search">
-        <h2>Rechercher</h2>
-        <input type="text" id="search-input" placeholder="Rechercher un arrêt ou une ligne...">
-        <button id="search-button">Rechercher</button>
-    </section>
     <main>
-        <section id="map">
+        <section id="map-section">
+            <h2>Carte Interactive</h2>
             <div id="map-container"></div>
+            <div id="itinerary-search">
+                <h3>Rechercher un Itinéraire</h3>
+                <input type="text" id="itinerary-from" placeholder="Départ">
+                <input type="text" id="itinerary-to" placeholder="Arrivée">
+                <button id="itinerary-search-btn">Rechercher</button>
+            </div>
         </section>
-        <section id="itineraries">
-            <h2>Calcul d'Itinéraires</h2>
-            <!-- Ajouter ici les éléments pour le calcul d'itinéraires -->
-        </section>
-        <section id="realtime">
-            <h2>Temps Réel</h2>
-            <!-- Ajouter ici les éléments pour le temps réel -->
+        <section id="lines-section">
+            <h2>Lignes</h2>
+            <input type="text" id="network-search" placeholder="Rechercher un réseau ou une ligne...">
+            <ul id="network-list">
+                <!-- Les réseaux seront listés ici -->
+            </ul>
         </section>
     </main>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
