@@ -37,4 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Prochains passages :', data.nextDepartures || 'N/A');
             });
     }
+
+    // Gérer la recherche
+    document.getElementById('search-button').addEventListener('click', function() {
+        const query = document.getElementById('search-input').value.toLowerCase();
+        // Filtrer les arrêts en fonction de la recherche
+        // Pour l'instant, nous allons simplement afficher la requête dans la console
+        console.log('Recherche :', query);
+    });
 });
