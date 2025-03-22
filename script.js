@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayLines(network) {
         // Afficher les lignes du réseau sélectionné
         console.log('Afficher les lignes pour :', network.name);
+        // Ici, vous pouvez ajouter la logique pour afficher les lignes
     }
 
     // Gérer la recherche d'itinéraires
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const from = document.getElementById('itinerary-from').value;
         const to = document.getElementById('itinerary-to').value;
         console.log(`Rechercher un itinéraire de ${from} à ${to}`);
+        // Ici, vous pouvez ajouter la logique pour calculer et afficher l'itinéraire
     });
 
     // Gérer la recherche de réseaux ou de lignes
@@ -48,5 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const query = this.value.toLowerCase();
         // Filtrer les réseaux en fonction de la recherche
         console.log('Recherche :', query);
+        // Ici, vous pouvez ajouter la logique pour filtrer les réseaux ou les lignes
     });
 });
