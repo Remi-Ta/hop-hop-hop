@@ -27,11 +27,26 @@
                 <input type="url" id="realtime-url" name="realtime-url">
                 <button type="submit">Ajouter Réseau</button>
             </form>
-        <ul id="network-list">
-        <!-- Les réseaux seront listés ici avec des boutons de modification et de suppression -->
-    </ul>
-</section>
-
+            <ul id="network-list">
+                <!-- Les réseaux seront listés ici -->
+            </ul>
+        </section>
+        <section id="gtfs-upload">
+            <h2>Télécharger les fichiers GTFS</h2>
+            <form id="gtfs-form">
+                <label for="gtfs-file">Fichier GTFS (zip) :</label>
+                <input type="file" id="gtfs-file" name="gtfs-file" accept=".zip" required>
+                <button type="submit">Télécharger</button>
+            </form>
+        </section>
+        <section id="realtime-api">
+            <h2>Lier une API en Temps Réel</h2>
+            <form id="realtime-form">
+                <label for="realtime-url">URL de l'API en Temps Réel :</label>
+                <input type="url" id="realtime-url" name="realtime-url" required>
+                <button type="submit">Lier API</button>
+            </form>
+        </section>
     </main>
     <script src="admin_script.js"></script>
 </body>
