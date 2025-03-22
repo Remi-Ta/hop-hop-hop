@@ -5,6 +5,25 @@ document.addEventListener('DOMContentLoaded', function() {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
+    // Charger les réseaux depuis le fichier JSON
+    fetch('https://raw.githubusercontent.com/Remi-Ta/hop-hop-hop/main/networks.json')
+        .then(response => response.json())
+        .then(networks => {
+            networks.forEach(network => {
+                // Simuler le parsing des fichiers GTFS
+                const stops = [
+                    { name: 'Arrêt 1', lat: 48.8566, lon: 2.3522 },
+                    { name: 'Arrêt 2', lat: 48.86, lon: 2.35 }
+                ];
+
+                stops.forEach(stop => {
+                    L.marker([stop.lat, stop.lon]).addTo(map)
+                        .bindPopup(`Arrêt : ${stop.name}`)
+                        .openPopup();
+                });
+            });
+        });
+
     // Gérer la recherche d'itinéraires
     document.getElementById('itinerary-search-btn').addEventListener('click', function() {
         const from = document.getElementById('itinerary-from').value;

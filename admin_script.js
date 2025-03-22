@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const realtimeForm = document.getElementById('realtime-form');
 
     // Charger les réseaux existants depuis le fichier JSON
-    fetch('networks.json')
+    fetch('https://raw.githubusercontent.com/Remi-Ta/hop-hop-hop/main/networks.json')
         .then(response => response.json())
         .then(networks => {
             networks.forEach(network => {
@@ -39,16 +39,20 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Ajouter le nouveau réseau au fichier JSON
-        fetch('networks.json')
+        fetch('https://raw.githubusercontent.com/Remi-Ta/hop-hop-hop/main/networks.json')
             .then(response => response.json())
             .then(networks => {
                 networks.push(newNetwork);
-                return fetch('networks.json', {
+                return fetch('https://api.github.com/repos/Remi-Ta/hop-hop-hop/contents/networks.json', {
                     method: 'PUT',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'Authorization': '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'
                     },
-                    body: JSON.stringify(networks, null, 2)
+                    body: JSON.stringify({
+                        message: 'Update networks.json',
+                        content: btoa(JSON.stringify(networks, null, 2))
+                    })
                 });
             })
             .then(() => {

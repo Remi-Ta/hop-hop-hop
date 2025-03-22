@@ -5,40 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hop Hop Hop !</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Boldense:wght@400;700&family=Figtree:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Hop Hop Hop !</h1>
+        <h1 class="boldense">Hop Hop Hop !</h1>
         <nav>
             <ul>
-                <li><a href="#map-section">Carte</a></li>
-                <li><a href="#lines-section">Lignes</a></li>
+                <li><a href="map.html">Carte</a></li>
+                <li><a href="lines.html">Lignes</a></li>
                 <li><a href="admin.html">Admin</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="map-section">
-            <h2>Carte Interactive</h2>
-            <div id="map-container"></div>
-            <div id="itinerary-search">
-                <h3>Rechercher un Itinéraire</h3>
-                <input type="text" id="itinerary-from" placeholder="Départ">
-                <input type="text" id="itinerary-to" placeholder="Arrivée">
-                <button id="itinerary-search-btn">Rechercher</button>
-            </div>
-        </section>
-        <section id="lines-section">
-            <h2>Lignes</h2>
-            <input type="text" id="network-search" placeholder="Rechercher un réseau ou une ligne...">
-            <ul id="network-list">
-                <!-- Les réseaux seront listés ici -->
-            </ul>
+        <section id="welcome-section">
+            <h2 class="boldense">Bienvenue sur Hop Hop Hop !</h2>
+            <p class="figtree">Utilisez les liens ci-dessus pour accéder aux différentes fonctionnalités de l'application.</p>
         </section>
     </main>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
