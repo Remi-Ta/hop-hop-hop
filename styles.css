@@ -10,6 +10,11 @@ header {
     color: white;
     padding: 1rem;
     text-align: center;
+    transition: background-color 0.3s;
+}
+
+header:hover {
+    background-color: #45a049;
 }
 
 nav ul {
@@ -26,10 +31,11 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #388e3c;
 }
 
 main {
@@ -39,6 +45,11 @@ main {
 #map-container {
     height: 500px;
     margin-bottom: 2rem;
+    transition: box-shadow 0.3s;
+}
+
+#map-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #itinerary-search, #lines-section {
@@ -53,9 +64,11 @@ main {
 #network-list li {
     padding: 0.5rem;
     border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 #network-list li:hover {
     background-color: #f0f0f0;
     cursor: pointer;
+    transform: scale(1.02);
 }
