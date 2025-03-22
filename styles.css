@@ -40,3 +40,22 @@ main {
     height: 500px;
     margin-bottom: 2rem;
 }
+
+#itinerary-search, #lines-section {
+    margin-top: 2rem;
+}
+
+#network-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#network-list li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+#network-list li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
