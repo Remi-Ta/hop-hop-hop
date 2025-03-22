@@ -10,30 +10,31 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(networks => {
             networks.forEach(network => {
-                // Charger et traiter le fichier GTFS
-                fetch(network.gtfsUrl)
-                    .then(response => response.text())
-                    .then(data => {
-                        // Simuler l'ajout d'un arrêt
-                        const marker = L.marker([48.8566, 2.3522]).addTo(map)
-                            .bindPopup(`Arrêt de ${network.name}`)
-                            .openPopup();
+                // Simuler le parsing des fichiers GTFS
+                const stops = [
+                    { name: 'Arrêt 1', lat: 48.8566, lon: 2.3522 },
+                    { name: 'Arrêt 2', lat: 48.86, lon: 2.35 }
+                ];
 
-                        // Ajouter les informations en temps réel
-                        if (network.realTimeUrl) {
-                            fetchRealTimeData(network.realTimeUrl, marker);
-                        }
-                    });
+                stops.forEach(stop => {
+                    L.marker([stop.lat, stop.lon]).addTo(map)
+                        .bindPopup(`Arrêt : ${stop.name}`)
+                        .openPopup();
+                });
+
+                // Ajouter les informations en temps réel
+                if (network.realTimeUrl) {
+                    fetchRealTimeData(network.realTimeUrl);
+                }
             });
         });
 
-    function fetchRealTimeData(url, marker) {
+    function fetchRealTimeData(url) {
         fetch(url)
             .then(response => response.json())
             .then(data => {
                 // Simuler l'affichage des prochains passages
-                const nextDeparture = data.nextDeparture || 'N/A';
-                marker.bindPopup(`Prochain passage : ${nextDeparture}`);
+                console.log('Prochains passages :', data.nextDepartures || 'N/A');
             });
     }
 });
