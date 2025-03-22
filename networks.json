@@ -5,5 +5,4 @@
         "gtfsUrl": "https://exemple.com/niort.zip",
         "realTimeUrl": "https://exemple.com/niort-realtime"
     }
-    // D'autres réseaux seront ajoutés ici
 ]
