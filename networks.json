@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "name": "Réseau de Niort",
-        "gtfsUrl": "https://exemple.com/niort.zip",
-        "realTimeUrl": "https://exemple.com/niort-realtime"
+        "name": "Tanlib - Niort",
+        "gtfsUrl": "https://transport.data.gouv.fr/resources/conversions/82352/GeoJSON",
+        "realTimeUrl": "https://api.okina.fr/gateway/nam/realtime/anshar/ws/services/?datasetId=CA_DU_NIORTAIS"
     }
 ]
